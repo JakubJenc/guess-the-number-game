@@ -36,13 +36,13 @@ public class MessageGeneratorImpl implements MessageGenerator {
     public String getResultMessage() {
 
         if(game.isGameWon()){
-            return "Yay, you guessed it! The number was " + game.getNumber();
+            return "Yay! You guessed it! The number was " + game.getNumber() + ".";
         }
         if(game.isGameLost()){
-            return "Too bad. The number was " + game.getNumber();
+            return "Too bad. The number was " + game.getNumber() + ".";
         }
         if(!game.isValidNumberRange()){
-            return "Invalid number range";
+            return "Invalid number range!";
         }
         if(game.getRemainingGuesses() == game.getGuessCount()){
             return "What is your first guess?";
@@ -53,7 +53,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
             if(game.getGuess() < game.getNumber()){
                 direction="Higher";
             }
-            return direction + "! You have " + game.getRemainingGuesses() + " guesses left";
+            return direction + "! You have " + game.getRemainingGuesses() + " guesses left.";
         }
     }
 }
