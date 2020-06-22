@@ -8,7 +8,7 @@ public interface GameService {
 
     String getResultMessage();
 
-    void checkGame();
+    void checkGuess(int guess);
 
     void reset();
 }

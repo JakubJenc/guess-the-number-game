@@ -1,0 +1,129 @@
+
+html, body {
+    background-color: snow;
+    padding-right: 100px;
+    padding-left: 100px;
+    flex-wrap: wrap;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    color: royalblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+thead {
+    background: royalblue;
+    color: whitesmoke;
+}
+
+thead tr:first-child th:first-child {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+thead tr:first-child th:last-child {
+    border-right: 0;
+    border-top: 0;
+}
+
+tbody tr:last-child td:first-child {
+    border-left: 0;
+    border-bottom: 0;
+}
+
+tbody tr:last-child td:last-child {
+    border-right: 0;
+    border-bottom: 0;
+}
+
+tbody tr:nth-child(even) {
+    background: lightskyblue;
+}
+
+.table-wrapper {
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: inline-block;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.flex-container {
+    display:list-item;
+    align-items: stretch;
+}
+
+.search-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+}
+
+.button {
+    box-shadow: inset 0px 1px 0px 0px lightskyblue;
+    background: linear-gradient(to bottom, royalblue 5%, darkblue 100%);
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    display: inline-block;
+    cursor: pointer;
+    color: snow;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 3px 12px;
+    text-decoration: lightskyblue;
+    text-shadow: 0px 1px 0px darkgray;
+    transition: 1s padding, 1s transform, 1s letter-spacing;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, lightskyblue 5%, royalblue 100%);
+    transform: scale(1,1);
+    position: relative;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+a:link {
+    color: darkblue;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:visited {
+    color: dodgerblue;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: royalblue;
+    font-weight: bold;
+    font-style: normal;
+}
+
+a:active {
+    font-weight: bold;
+    font-style: normal;
+    background-color: lightskyblue;
+    text-decoration: none;
+}

@@ -2,9 +2,13 @@ package com.udemy.learnprogramming.service;
 
 import com.udemy.learnprogramming.Game;
 import com.udemy.learnprogramming.MessageGenerator;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+
+@Slf4j
 @Service
 public class GameServiceImpl implements GameService {
 
@@ -17,6 +21,13 @@ public class GameServiceImpl implements GameService {
     public GameServiceImpl(Game game, MessageGenerator messageGenerator) {
         this.game = game;
         this.messageGenerator = messageGenerator;
+    }
+
+    // == init ==
+    @PostConstruct
+    public void init() {
+        log.info("number = {}", game.getNumber());
+        log.info("mainMessage = {}", messageGenerator.getMainMessage());
     }
 
     // == overridden methods ==
@@ -39,8 +50,8 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void checkGame() {
-        game.setGuess(7);
+    public void checkGuess(int guess) {
+        game.setGuess(guess);
         game.check();
     }
 

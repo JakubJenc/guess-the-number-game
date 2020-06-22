@@ -1,3 +1,9 @@
+com\udemy\learnprogramming\service\GameService.class
+com\udemy\learnprogramming\service\GameServiceImpl.class
+com\udemy\learnprogramming\config\WebConfig.class
+com\udemy\learnprogramming\controller\GameController.class
+com\udemy\learnprogramming\util\GameMappings.class
 com\udemy\learnprogramming\util\ViewNames.class
 com\udemy\learnprogramming\WebMain.class
-com\udemy\learnprogramming\config\WebConfig.class
+com\udemy\learnprogramming\util\AttributeNames.class
+com\udemy\learnprogramming\util\thymeleaf\DecoupledLogicSetup.class
